@@ -5,7 +5,7 @@ public class Selection_Sort {
     // Method to perform selection sort on the array
     public static void sort(int[] arr){
         // Traverse the entire array
-        for(int i = 0; i < arr.length; i++){
+        for(int i = 0; i < arr.length-1; i++){
             int minIdx = i; // Assume the current index is the minimum
             // Find the index of the minimum element in the unsorted part
             for(int j = i + 1; j < arr.length; j++){
