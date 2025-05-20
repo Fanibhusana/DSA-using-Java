@@ -7,6 +7,7 @@ public class Bubble_Sort {
         int len = arr.length;
         // Outer loop for each pass
         for(int i = 0; i < len - 1; i++){
+            boolean swapped = false;
             // Inner loop for comparing adjacent elements
             for(int j = 0; j < len - 1 - i; j++){
                 // Swap if elements are in the wrong order
@@ -14,8 +15,12 @@ public class Bubble_Sort {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+
+                    swapped = true;
                 }
             }
+            // If no swaps, array is sorted — exit early
+            if (!swapped) break;
         }
     }
 
